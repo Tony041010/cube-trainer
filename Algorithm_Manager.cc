@@ -8,7 +8,7 @@
 AlgorithmManager::Algorithm string;
 
 //AlgorithmManager reads all 7 algorithms and print them out with their names.
-AlgorithmManager::AlgorithmManager(const std::string algorithm_filepath){
+AlgorithmManager::AlgorithmManager( std::string algorithm_filepath){
 	//read the Algorithm_File by ifstream.
 	std::ifstream Algorithm_File ;
 	Algorithm_File.open( "algorithm_file.txt" ,ios::in);
