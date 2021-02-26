@@ -71,7 +71,7 @@ void GetAlgorithm( std::string &name ){
 	
 	//start to get the image of the algorithm.
 	std::TargetName='\0';
-	std::int count = lines;
+	std::int GetlineCount = lines;
 	std::int q=0;
 	for(int i=lines;i<lines+5;i++){
 		while(getline(Algorithm_File , TargetName) && q<count-1){
