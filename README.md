@@ -14,3 +14,7 @@ Shows the selected algorithm to the user,
 Collects the time that the user spends on memorizing the algorithm to update sorting strategy S.
 
 As a result, we observe a decreasing time spent by the user on the OLL step.
+
+
+Test  for Pull request practice.
+New stentences.
