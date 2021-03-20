@@ -8,20 +8,20 @@
 AlgorithmManager::Algorithm string;
 
 //AlgorithmManager reads all 7 algorithms and print them out with their names.
-AlgorithmManager::AlgorithmManager( std::string algorithm_filepath){
+AlgorithmManager::AlgorithmManager( ){
 	//read the Algorithm_File by ifstream.
 	std::ifstream Algorithm_File ;
 	Algorithm_File.open( "algorithm_file.txt" ,ios::in);
-	string algorithm_filepath;
-	std::string AllAlgorithm[7][5];
+	std::string algorithm_filepath[7][5];
+	std::string algorithm_reader;
 	int ReadCount=0;
 	int limit=14;
 	for(int Times=0;Times<7;Times++){
 		for(int Layer=0;Layer<5;Layer++){
-			while(getline(Algorithm_File,algorithm_filepath) && ReadCount<limit){
+			while(getline(Algorithm_File,algorithm_reader) && ReadCount<limit){
 				ReadCount++;
 			}
-			AllAlgorithm[Times][Layer]=algorithm_filepath;
+			algorithm_filepath[Times][Layer]=algorithm_filepath;
 		}
 	}
 	Algorithm_File.close();
@@ -39,7 +39,7 @@ AlgorithmManager::AlgorithmManager( std::string algorithm_filepath){
 	return ;
 }
 
-//Let all the names push in vectors.
+//Let all the names pushed in vectors.
 std::vector<std::string> AlgorithmManager::GetAllAlgorithmNames(){
 	
 	//read the Algorithm_File by ifstream.
@@ -55,15 +55,14 @@ std::vector<std::string> AlgorithmManager::GetAllAlgorithmNames(){
 }
 
 //get the specific algorithm with its name.
-void GetAlgorithm( std::string &name ){
-	std::string &name = string.name;
+void GetAlgorithm( std::string name ){
 	std::cin>>name;
 	std::ifstream Algorithm_File;
 	Algorithm_File.open("algorithm_file.txt",)
 	std::string TargetName;
 	for(std::int t=0;t<7;t++){
 		std::getline(Algorithm_File ,TargetName );
-		if(TargetName = name ){
+		if(TargetName == name ){
 			std::int lines= t*5+14+1; // where the target algorithm begins to be written.
 			std::break;
 		}

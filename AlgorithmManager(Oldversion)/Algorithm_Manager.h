@@ -6,8 +6,8 @@
 
 class AlgorithmManager {
 public:
-  // AlgorithmManager reads the algorithms from algorithm_filepath.
-  AlgorithmManager(const std::string algorithm_filepath);
+  // AlgorithmManager can be called to print all algorithms with their correspondong names.
+  AlgorithmManager( );
 
   struct Algorithm {
     std::string name;
@@ -15,7 +15,7 @@ public:
     std::string image; // We now use 0 and 1 to present 7 algorithms.
   };
   // Gets an algorithm with its name.
-void GetAlgorithm(const std::string &name) ;
+void GetAlgorithm(const std::string name) ;
   // Gets all algorithm names.
 	std::vector<std::string> GetAllAlgorithmNames();
 };
